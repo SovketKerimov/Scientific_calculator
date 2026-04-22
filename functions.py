@@ -87,6 +87,26 @@ def triangle_cone():
                 print(f"The median to the first side is : {median_t0} ")
                 print(f"The median to the second side is : {median_t1} ")
                 print(f"The median to the third side is : {median_t2}")
+            elif choice0==7:
+                a_t0=float(input("Enter the first side of a triangle :"))
+                a_t1=float(input("Enter the second side of a triangle :"))
+                a_t2=float(input("Enter the third side of a triangle :"))
+                half_p=(a_t0+a_t1+a_t2)/2
+                area_t=math.sqrt(half_p*(half_p-a_t0)*(half_p-a_t1)*(half_p-a_t2))
+                radius_in=round(area_t/half_p,2)
+                print(f"The radius of the inscribed circle is : {radius_in}")
+            elif choice0==8:
+                a_t0=float(input("Enter the first side of a triangle :"))
+                a_t1=float(input("Enter the second side of a triangle :"))
+                a_t2=float(input("Enter the third side of a triangle :"))
+                half_p=(a_t0+a_t1+a_t2)/2
+                area_t=math.sqrt(half_p*(half_p-a_t0)*(half_p-a_t1)*(half_p-a_t2))
+                radius_out=round((a_t0*a_t1*a_t2)/(4*area_t),2)
+                print(f"The radius of the circumcircle is : {radius_out}")
+
+
+
+
     except ValueError:
         print("Invalid input")
         triangle_cone()
