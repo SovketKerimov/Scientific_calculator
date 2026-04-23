@@ -4,160 +4,185 @@ numbers=[]
 #1- Triangle / Cone
 def triangle_cone():
     try:
-        print("1-Triangle")
-        print("2-cone")
-        main_choice0=int(input("Choose one(1 or 2) :"))
-        #triangle
-        if main_choice0 == 1:
+        while True:
+            print("1-Triangle")
+            print("2-cone")
+            main_choice0=int(input("Choose one(1 or 2) :"))
+            #triangle
+            if main_choice0 == 1:
 
-            print("1-Area")
-            print("2-Perimeter")
-            print("3-Hypotenuse (for right triangle)")
-            print("4-Type of triangle")
-            print("5-Altitudes")
-            print("6-Medians")
-            print("7-Radius of the inscribed circle")
-            print("8-Radius of the circumscribed circle")
-            print("9-Angles in degrees")
-            choice0=input("Enter your choice(1-9) :")
+                print("1-Area")
+                print("2-Perimeter")
+                print("3-Hypotenuse (for right triangle)")
+                print("4-Type of triangle")
+                print("5-Altitudes")
+                print("6-Medians")
+                print("7-Radius of the inscribed circle")
+                print("8-Radius of the circumscribed circle")
+                print("9-Angles in degrees")
+                choice0=input("Enter your choice(1-9) :")
 
-            if choice0 == 1:
+                if choice0 == 1:
 
-                a_t0=float(input("Enter the first side of a triangle :"))
-                a_t1=float(input("Enter the second side of a triangle :"))
-                a_t2=float(input("Enter the third side of a triangle :"))
+                    a_t0=float(input("Enter the first side of a triangle :"))
+                    a_t1=float(input("Enter the second side of a triangle :"))
+                    a_t2=float(input("Enter the third side of a triangle :"))
 
-                halfp_t=(a_t0+a_t1+a_t2)/2
-                area_t= round(math.sqrt(halfp_t*(halfp_t-a_t0)*(halfp_t-a_t1)*(halfp_t-a_t2)),2)
+                    halfp_t=(a_t0+a_t1+a_t2)/2
+                    area_t= round(math.sqrt(halfp_t*(halfp_t-a_t0)*(halfp_t-a_t1)*(halfp_t-a_t2)),2)
 
-                print(f"The area of a triangle is : {area_t}")
+                    print(f"The area of a triangle is : {area_t}")
 
-            elif choice0 == 2:
+                elif choice0 == 2:
 
-                a_t0=float(input("Enter the first side of a triangle :"))
-                a_t1=float(input("Enter the second side of a triangle :"))
-                a_t2=float(input("Enter the third side of a triangle :"))
+                    a_ta=float(input("Enter the first side of a triangle :"))
+                    a_tb=float(input("Enter the second side of a triangle :"))
+                    a_tc=float(input("Enter the third side of a triangle :"))
 
-                perimeter_t=round((a_t0+a_t1+a_t2),2)
+                    perimeter_t=round((a_ta+a_tb+a_tc),2)
 
-                print(f"The perimeter of a triangle is : {perimeter_t}")
+                    print(f"The perimeter of a triangle is : {perimeter_t}")
 
-            elif choice0 == 3:
+                elif choice0 == 3:
 
-                rs_t0=float(input("Enter the first right side of a triangle :"))
-                rs_t1=float(input("Enter the second right side of a triangle :"))
+                    rs_t0=float(input("Enter the first right side of a triangle :"))
+                    rs_t1=float(input("Enter the second right side of a triangle :"))
 
-                hyp_t=round(math.sqrt(rs_t0**2+rs_t1**2),2)
+                    hyp_t=round(math.sqrt(rs_t0**2+rs_t1**2),2)
 
-                print(f"The hypotenuse of a triangle is : {hyp_t}")
+                    print(f"The hypotenuse of a triangle is : {hyp_t}")
 
-            elif choice0 == 4:
+                elif choice0 == 4:
 
-                a_t0=float(input("Enter the first side of a triangle :"))
-                a_t1=float(input("Enter the second side of a triangle :"))
-                a_t2=float(input("Enter the third side of a triangle :"))
+                    a_tl=float(input("Enter the first side of a triangle :"))
+                    a_tk=float(input("Enter the second side of a triangle :"))
+                    a_tm=float(input("Enter the third side of a triangle :"))
 
-                if a_t0==a_t1==a_t2:
-                    print("Your triangle is : Equilateral")
-                elif a_t0==a_t1 or a_t1==a_t2 or a_t2==a_t0:
-                    print("Your triangle is : Isosceles")
-                else:
-                    print("Your triangle is : Scalene")
+                    if a_tl==a_tk==a_tm:
+                        print("Your triangle is : Equilateral")
+                    elif a_tl==a_tk or a_tl==a_tm or a_tk==a_tl:
+                        print("Your triangle is : Isosceles")
+                    else:
+                        print("Your triangle is : Scalene")
 
-            elif choice0 == 5:
+                elif choice0 == 5:
 
-                a_t0=float(input("Enter the first side of a triangle :"))
-                a_t1=float(input("Enter the second side of a triangle :"))
-                a_t2=float(input("Enter the third side of a triangle :"))
+                    a_td=float(input("Enter the first side of a triangle :"))
+                    a_te=float(input("Enter the second side of a triangle :"))
+                    a_tf=float(input("Enter the third side of a triangle :"))
 
-                halfp_t=(a_t0+a_t1+a_t2)/2
-                area_t=math.sqrt(halfp_t*(halfp_t-a_t0)*(halfp_t-a_t1)*(halfp_t-a_t2))
-                hight_t0=2*area_t/a_t0
-                hight_t1=2*area_t/a_t1
-                hight_t2=2*area_t/a_t2
+                    halfp_t=(a_td+a_te+a_tf)/2
+                    area_t=math.sqrt(halfp_t*(halfp_t-a_td)*(halfp_t-a_tf)*(halfp_t-a_te))
+                    hight_t0=(2*area_t)/a_td
+                    hight_t1=(2*area_t)/a_te
+                    hight_t2=(2*area_t)/a_tf
 
-                print(f"The altitude to the first side : {hight_t0} ")
-                print(f"The altitude to the second side : {hight_t1} ")
-                print(f"The altitude to the third side : {hight_t2}")
+                    print(f"The altitude to the first side : {hight_t0} ")
+                    print(f"The altitude to the second side : {hight_t1} ")
+                    print(f"The altitude to the third side : {hight_t2}")
 
-            elif choice0== 6:
+                elif choice0== 6:
 
-                a_t0=float(input("Enter the first side of a triangle :"))
-                a_t1=float(input("Enter the second side of a triangle :"))
-                a_t2=float(input("Enter the third side of a triangle :"))
+                    a_t5=float(input("Enter the first side of a triangle :"))
+                    a_t6=float(input("Enter the second side of a triangle :"))
+                    a_t7=float(input("Enter the third side of a triangle :"))
 
-                median_t0=0.5*math.sqrt(2*(a_t2**2+a_t1**2)-a_t0**2)
-                median_t1=0.5*math.sqrt(2*(a_t0**2+a_t0**2)-a_t1**2)
-                median_t2=0.5*math.sqrt(2*(a_t1**2+a_t2**2)-a_t2**2)
+                    median_t0=0.5*math.sqrt(2*(a_t6**2+a_t7**2)-a_t5**2)
+                    median_t1=0.5*math.sqrt(2*(a_t5**2+a_t7**2)-a_t6**2)
+                    median_t2=0.5*math.sqrt(2*(a_t5**2+a_t6**2)-a_t7**2)
 
-                print(f"The median to the first side is : {median_t0} ")
-                print(f"The median to the second side is : {median_t1} ")
-                print(f"The median to the third side is : {median_t2}")
+                    print(f"The median to the first side is : {median_t0} ")
+                    print(f"The median to the second side is : {median_t1} ")
+                    print(f"The median to the third side is : {median_t2}")
 
-            elif choice0==7:
+                elif choice0==7:
 
-                a_t0=float(input("Enter the first side of a triangle :"))
-                a_t1=float(input("Enter the second side of a triangle :"))
-                a_t2=float(input("Enter the third side of a triangle :"))
+                    a_t0=float(input("Enter the first side of a triangle :"))
+                    a_t1=float(input("Enter the second side of a triangle :"))
+                    a_t2=float(input("Enter the third side of a triangle :"))
 
-                half_p=(a_t0+a_t1+a_t2)/2
-                area_t=math.sqrt(half_p*(half_p-a_t0)*(half_p-a_t1)*(half_p-a_t2))
-                radius_in=round(area_t/half_p,2)
+                    half_p=(a_t0+a_t1+a_t2)/2
+                    area_t=math.sqrt(half_p*(half_p-a_t0)*(half_p-a_t1)*(half_p-a_t2))
+                    radius_in=round(area_t/half_p,2)
 
-                print(f"The radius of the inscribed circle is : {radius_in}")
+                    print(f"The radius of the inscribed circle is : {radius_in}")
 
-            elif choice0==8:
+                elif choice0==8:
 
-                a_t0=float(input("Enter the first side of a triangle :"))
-                a_t1=float(input("Enter the second side of a triangle :"))
-                a_t2=float(input("Enter the third side of a triangle :"))
+                    a_t0=float(input("Enter the first side of a triangle :"))
+                    a_t1=float(input("Enter the second side of a triangle :"))
+                    a_t2=float(input("Enter the third side of a triangle :"))
 
-                half_p=(a_t0+a_t1+a_t2)/2
-                area_t=math.sqrt(half_p*(half_p-a_t0)*(half_p-a_t1)*(half_p-a_t2))
-                radius_out=round((a_t0*a_t1*a_t2)/(4*area_t),2)
+                    half_p=(a_t0+a_t1+a_t2)/2
+                    area_t=math.sqrt(half_p*(half_p-a_t0)*(half_p-a_t1)*(half_p-a_t2))
+                    radius_out=round((a_t0*a_t1*a_t2)/(4*area_t),2)
 
-                print(f"The radius of the circumcircle is : {radius_out}")
+                    print(f"The radius of the circumcircle is : {radius_out}")
 
-            elif choice0==9:
+                elif choice0==9:
 
-                a_t0=float(input("Enter the first side of a triangle :"))
-                a_t1=float(input("Enter the second side of a triangle :"))
-                a_t2=float(input("Enter the third side of a triangle :"))
+                    a_t0=float(input("Enter the first side of a triangle :"))
+                    a_t1=float(input("Enter the second side of a triangle :"))
+                    a_t2=float(input("Enter the third side of a triangle :"))
 
-                a_d0=round(math.degrees(math.acos((pow(a_t1,2) + pow(a_t2,2) - pow(a_t0,2))/(2*a_t1*a_t2))),2)
-                a_d1=round(math.degrees(math.acos((pow(a_t0,2 + pow(a_t2,2)-pow(a_t1,2))/(2*a_t0*a_t2)))),2)
-                a_d2=round(180-a_d0-a_d1,2)
+                    a_d0=round(math.degrees(math.acos((pow(a_t1,2) + pow(a_t2,2) - pow(a_t0,2))/(2*a_t1*a_t2))),2)
+                    a_d1=round(math.degrees(math.acos((pow(a_t0,2 + pow(a_t2,2)-pow(a_t1,2))/(2*a_t0*a_t2)))),2)
+                    a_d2=round(180-a_d0-a_d1,2)
 
-                print(f"The degrees of the triangle is : \n")
-                print(f"First one :{a_d0} ")
-                print(f"Second one :{a_d1} ")
-                print(f"Third one :{a_d2} ")
-        elif main_choice0==2:
+                    print(f"The degrees of the triangle is : \n")
+                    print(f"First one :{a_d0} ")
+                    print(f"Second one :{a_d1} ")
+                    print(f"Third one :{a_d2} ")
+            elif main_choice0==2:
 
-            print("1-Volume")
-            print("2-Lateral surface area")
-            print("3-Base area")
-            print("4-Total surface area")
-            print("5-Slant height")
-            choice1=input("Enet your choice(1-5) :")
+                print("1-Volume")
+                print("2-Lateral surface area")
+                print("3-Base area")
+                print("4-Total surface area")
+                print("5-Slant height")
+                choice1=input("Enet your choice(1-5) :")
 
-            if choice1==1:
+                if choice1==1:
 
-                height_0=float(input("Enter the height of the cone :"))
-                radius_0=float(input("Enter the radius of the base"))
-                volume_0=round(1/3*math.pi*height_0*radius_0,2)
+                    height_0=float(input("Enter the height of the cone :"))
+                    radius_0=float(input("Enter the radius of the base"))
+                    volume_0=round(1/3*math.pi*height_0*radius_0,2)
 
-                print(f"The volume of the cone is : {volume_0}")
-            elif choice1==2:
+                    print(f"The volume of the cone is : {volume_0}")
+                elif choice1==2:
 
-                radius_0=float(input("Enter the radius of the cone : "))
-                slant_0=float(input("Enter the length of the slant :"))
-                lat_s0=round(math.pi*radius_0*slant_0,2)
+                    radius_1=float(input("Enter the radius of the cone : "))
+                    slant_0=float(input("Enter the length of the slant :"))
+                    lat_s0=round(math.pi*radius_1*slant_0,2)
 
-                print(f"The value of the lateral surface area is : {lat_s0} ")
+                    print(f"The value of the lateral surface area is : {lat_s0} ")
 
+                elif choice1==3:
 
+                    radius_2=float(input("Enter the radius of the cone: "))
+
+                    base_a0=round(math.pi*pow(radius_2,2),2)
+
+                    print(f"The are of the base is : {base_a0} ")
+
+                elif choice1==4:
+
+                    radius_2=float(input("Enter the radius of the cone :"))
+                    slant_2=float(input("Enter the slant of the cone :"))
+
+                    total_area=round((math.pi*pow(radius_2,2)+math.pi*radius_2*slant_2),2)
+
+                    print(f"The total area of the cone is : {total_area} ")
+                elif choice1==5:
+
+                    radius_3=float(input("Enter the radius of the cone :"))
+                    height_3=float(input("Enter the height of the cone :"))
+
+                    slant_a=round(math.sqrt(pow(radius_3,2)+pow(height_3,2)),2)
+
+                    print(f"The length of the slant is : {slant_a}")
     except ValueError:
         print("Invalid input")
-        triangle_cone()
-triangle_cone()
+#2-Square,Rombus,Trapezoid
+def square_rombus_trapezoid():
+    pass
