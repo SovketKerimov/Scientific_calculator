@@ -7,7 +7,7 @@ def triangle_cone():
         while True:
             print("1-Triangle")
             print("2-cone")
-            main_choice0=int(input("Choose one(1 or 2) :"))
+            main_choice0=int(input("Choose one(1-2) :"))
             #triangle
             if main_choice0 == 1:
 
@@ -185,4 +185,10 @@ def triangle_cone():
         print("Invalid input")
 #2-Square,Rombus,Trapezoid
 def square_rombus_trapezoid():
+    print("1-Square")
+    print("2-Rombus")
+    print("3-Trapezoid")
+    main_cs=input("Choose one(1-3)")
     pass
+#3-Circle,Cylinder,Sphere
+
