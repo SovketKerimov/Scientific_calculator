@@ -1,6 +1,6 @@
 import math
 
-ededler=[]
+numbers=[]
 #1- Triangle / Cone
 def triangle_cone():
     try:
@@ -19,15 +19,17 @@ def triangle_cone():
             print("7-Radius of the inscribed circle")
             print("8-Radius of the circumscribed circle")
             print("9-Angles in degrees")
-            choice0=input("Choose one(1 or 2) :")
+            choice0=input("Enter your choice(1-9) :")
 
             if choice0 == 1:
 
                 a_t0=float(input("Enter the first side of a triangle :"))
                 a_t1=float(input("Enter the second side of a triangle :"))
                 a_t2=float(input("Enter the third side of a triangle :"))
+
                 halfp_t=(a_t0+a_t1+a_t2)/2
                 area_t= round(math.sqrt(halfp_t*(halfp_t-a_t0)*(halfp_t-a_t1)*(halfp_t-a_t2)),2)
+
                 print(f"The area of a triangle is : {area_t}")
 
             elif choice0 == 2:
@@ -35,14 +37,18 @@ def triangle_cone():
                 a_t0=float(input("Enter the first side of a triangle :"))
                 a_t1=float(input("Enter the second side of a triangle :"))
                 a_t2=float(input("Enter the third side of a triangle :"))
+
                 perimeter_t=round((a_t0+a_t1+a_t2),2)
+
                 print(f"The perimeter of a triangle is : {perimeter_t}")
 
             elif choice0 == 3:
 
                 rs_t0=float(input("Enter the first right side of a triangle :"))
                 rs_t1=float(input("Enter the second right side of a triangle :"))
+
                 hyp_t=round(math.sqrt(rs_t0**2+rs_t1**2),2)
+
                 print(f"The hypotenuse of a triangle is : {hyp_t}")
 
             elif choice0 == 4:
@@ -87,6 +93,7 @@ def triangle_cone():
                 print(f"The median to the first side is : {median_t0} ")
                 print(f"The median to the second side is : {median_t1} ")
                 print(f"The median to the third side is : {median_t2}")
+
             elif choice0==7:
 
                 a_t0=float(input("Enter the first side of a triangle :"))
@@ -98,6 +105,7 @@ def triangle_cone():
                 radius_in=round(area_t/half_p,2)
 
                 print(f"The radius of the inscribed circle is : {radius_in}")
+
             elif choice0==8:
 
                 a_t0=float(input("Enter the first side of a triangle :"))
@@ -109,6 +117,7 @@ def triangle_cone():
                 radius_out=round((a_t0*a_t1*a_t2)/(4*area_t),2)
 
                 print(f"The radius of the circumcircle is : {radius_out}")
+
             elif choice0==9:
 
                 a_t0=float(input("Enter the first side of a triangle :"))
@@ -123,10 +132,32 @@ def triangle_cone():
                 print(f"First one :{a_d0} ")
                 print(f"Second one :{a_d1} ")
                 print(f"Third one :{a_d2} ")
+        elif main_choice0==2:
 
+            print("1-Volume")
+            print("2-Lateral surface area")
+            print("3-Base area")
+            print("4-Total surface area")
+            print("5-Slant height")
+            choice1=input("Enet your choice(1-5) :")
 
+            if choice1==1:
+
+                height_0=float(input("Enter the height of the cone :"))
+                radius_0=float(input("Enter the radius of the base"))
+                volume_0=round(1/3*math.pi*height_0*radius_0,2)
+
+                print(f"The volume of the cone is : {volume_0}")
+            elif choice1==2:
+
+                radius_0=float(input("Enter the radius of the cone : "))
+                slant_0=float(input("Enter the length of the slant :"))
+                lat_s0=round(math.pi*radius_0*slant_0,2)
+
+                print(f"The value of the lateral surface area is : {lat_s0} ")
 
 
     except ValueError:
         print("Invalid input")
         triangle_cone()
+triangle_cone()
