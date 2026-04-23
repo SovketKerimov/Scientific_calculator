@@ -191,4 +191,9 @@ def square_rombus_trapezoid():
     main_cs=input("Choose one(1-3)")
     pass
 #3-Circle,Cylinder,Sphere
-
+def circle_cylinder_sphere():
+    print("1-Circle")
+    print("2-Cylinder")
+    print("3-Sphere")
+    main_cc=input("Choose one(1-3)")
+    pass
