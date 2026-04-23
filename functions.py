@@ -197,3 +197,8 @@ def circle_cylinder_sphere():
     print("3-Sphere")
     main_cc=input("Choose one(1-3)")
     pass
+def menyu():
+    print("\n-MENU-")
+    print("1-Triangle / Cone")
+    print("2-Square / Rombus / Trapezoid")
+    print("3-Circle / Cylinder / Sphere")
