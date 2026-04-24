@@ -183,13 +183,44 @@ def triangle_cone():
                     print(f"The length of the slant is : {slant_a}")
     except ValueError:
         print("Invalid input")
+        pass
 #2-Square,Rombus,Trapezoid
 def square_rombus_trapezoid():
     print("1-Square")
     print("2-Rombus")
     print("3-Trapezoid")
     main_cs=input("Choose one(1-3)")
-    pass
+    try:
+      if main_cs==1:
+
+          print("1-Area")
+          print('2-Perimeter')
+          print('3-Diagonal')
+          print('4-Inradius')
+          print('5-Circumradius')
+          square_c=input("Enter your choice(1-5) :")
+
+          if square_c==1:
+
+            s_s0=float(input('Enter the side of a square :'))
+            a_s0=round(pow(s_s0,2),2)
+
+            print(f"The area of the square is : {a_s0}")
+          if square_c==2:
+
+              s_s1=float(input('Enter the side of a square :'))
+              p_s0=round((s_s1*4),2)
+
+              print(f'The perimeter of a square is : {p_s0}')
+          if square_c==3:
+
+              s_s2=float(input('Enter the side of a square :'))
+              d_s0=round(math.sqrt(pow(s_s2,2)+pow(s_s2,2)),2)
+
+              print(f'The diagonal of a square is : {d_s0}')
+    except ValueError:
+        print("Invalid input")
+        pass
 #3-Circle,Cylinder,Sphere
 def circle_cylinder_sphere():
     print("1-Circle")
