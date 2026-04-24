@@ -9,7 +9,7 @@ def triangle_cone():
             print("2-cone")
             main_choice0=int(input("Choose one(1-2) :"))
             #triangle
-            if main_choice0 == 1:
+            if main_choice0 ==1:
 
                 print("1-Area")
                 print("2-Perimeter")
@@ -133,6 +133,7 @@ def triangle_cone():
                     print(f"First one :{a_d0} ")
                     print(f"Second one :{a_d1} ")
                     print(f"Third one :{a_d2} ")
+
             elif main_choice0==2:
 
                 print("1-Volume")
@@ -196,8 +197,8 @@ def square_rombus_trapezoid():
           print("1-Area")
           print('2-Perimeter')
           print('3-Diagonal')
-          print('4-Inradius')
-          print('5-Circumradius')
+          print('4-Radius of inscribed circle')
+          print('5-Radius of circumscribed circle')
           square_c=input("Enter your choice(1-5) :")
 
           if square_c==1:
@@ -206,18 +207,38 @@ def square_rombus_trapezoid():
             a_s0=round(pow(s_s0,2),2)
 
             print(f"The area of the square is : {a_s0}")
-          if square_c==2:
+          elif square_c==2:
 
               s_s1=float(input('Enter the side of a square :'))
               p_s0=round((s_s1*4),2)
 
               print(f'The perimeter of a square is : {p_s0}')
-          if square_c==3:
+          elif square_c==3:
 
               s_s2=float(input('Enter the side of a square :'))
               d_s0=round(math.sqrt(pow(s_s2,2)+pow(s_s2,2)),2)
 
               print(f'The diagonal of a square is : {d_s0}')
+          elif square_c==4:
+
+              s_s3=float(input('Enter the side of a square :'))
+              r_s0=s_s3/2
+
+              print(f'The radius of an inscribed circle is : {r_s0}')
+
+          elif square_c==5:
+
+              s_s4=float(input('Enter the side of a square :'))
+              d_s1=round(math.sqrt(pow(s_s4,2)+pow(s_s4,2)),2)/2
+
+              print(f'The radius of an circumscribed circle is  : {d_s1}')
+      elif main_cs==2:
+          print('1-Area')
+          print('2-Perimeter')
+          print('3-')
+
+
+
     except ValueError:
         print("Invalid input")
         pass
