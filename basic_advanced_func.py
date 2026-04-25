@@ -50,3 +50,14 @@ def faktorial_komb():
                     pass
                 else:
                     print("Eded daxil etmediniz")
+def faktorial_komb():
+    print("1-Faktorial\n2-Kombinasiya")
+    sec=int(input("Secim: "))
+    if sec==1:
+        n=int(input("Ədəd: "))
+        print("Faktorial:",math.factorial(n))
+    elif sec==2:
+        n=int(input("n: "))
+        k=int(input("k: "))
+        c=math.factorial(n)//(math.factorial(k)*math.factorial(n-k))
+        print("C(n,k):",c)

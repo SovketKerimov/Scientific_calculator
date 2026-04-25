@@ -254,3 +254,14 @@ def menyu():
     print("1-Triangle / Cone")
     print("2-Square / Rombus / Trapezoid")
     print("3-Circle / Cylinder / Sphere")
+def daire_silindr_kure():
+    print("1-Dairə\n2-Silindr\n3-Küre")
+    sec=int(input("Secim: "))
+    r=float(input("Radius: "))
+    if sec==1:
+        print("Sahə:",math.pi*r**2,"Uzunluq:",2*math.pi*r)
+    elif sec==2:
+        h=float(input("Hündürlük: "))
+        print("Həcmi:",math.pi*r**2*h)
+    elif sec==3:
+        print("Həcmi:",(4/3)*math.pi*r**3)
