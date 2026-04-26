@@ -7,10 +7,9 @@ def triangle_cone():
         while True:
             print("1-Triangle")
             print("2-cone")
-            main_choice0=int(input("Choose one(1-2) :"))
+            main_choice0=input("Choose one(1-2) :")
             #triangle
-            if main_choice0 ==1:
-
+            if main_choice0=="1":
                 print("1-Area")
                 print("2-Perimeter")
                 print("3-Hypotenuse (for right triangle)")
@@ -22,7 +21,7 @@ def triangle_cone():
                 print("9-Angles in degrees")
                 choice0=input("Enter your choice(1-9) :")
 
-                if choice0 == 1:
+                if choice0 == "1":
 
                     a_t0=float(input("Enter the first side of a triangle :"))
                     a_t1=float(input("Enter the second side of a triangle :"))
@@ -33,7 +32,7 @@ def triangle_cone():
 
                     print(f"The area of a triangle is : {area_t}")
 
-                elif choice0 == 2:
+                elif choice0 == "2":
 
                     a_ta=float(input("Enter the first side of a triangle :"))
                     a_tb=float(input("Enter the second side of a triangle :"))
@@ -43,7 +42,7 @@ def triangle_cone():
 
                     print(f"The perimeter of a triangle is : {perimeter_t}")
 
-                elif choice0 == 3:
+                elif choice0 == "3":
 
                     rs_t0=float(input("Enter the first right side of a triangle :"))
                     rs_t1=float(input("Enter the second right side of a triangle :"))
@@ -52,7 +51,7 @@ def triangle_cone():
 
                     print(f"The hypotenuse of a triangle is : {hyp_t}")
 
-                elif choice0 == 4:
+                elif choice0 == "4":
 
                     a_tl=float(input("Enter the first side of a triangle :"))
                     a_tk=float(input("Enter the second side of a triangle :"))
@@ -65,7 +64,7 @@ def triangle_cone():
                     else:
                         print("Your triangle is : Scalene")
 
-                elif choice0 == 5:
+                elif choice0 == "5":
 
                     a_td=float(input("Enter the first side of a triangle :"))
                     a_te=float(input("Enter the second side of a triangle :"))
@@ -81,7 +80,7 @@ def triangle_cone():
                     print(f"The altitude to the second side : {hight_t1} ")
                     print(f"The altitude to the third side : {hight_t2}")
 
-                elif choice0== 6:
+                elif choice0== "6":
 
                     a_t5=float(input("Enter the first side of a triangle :"))
                     a_t6=float(input("Enter the second side of a triangle :"))
@@ -95,7 +94,7 @@ def triangle_cone():
                     print(f"The median to the second side is : {median_t1} ")
                     print(f"The median to the third side is : {median_t2}")
 
-                elif choice0==7:
+                elif choice0== "7":
 
                     a_t0=float(input("Enter the first side of a triangle :"))
                     a_t1=float(input("Enter the second side of a triangle :"))
@@ -107,7 +106,7 @@ def triangle_cone():
 
                     print(f"The radius of the inscribed circle is : {radius_in}")
 
-                elif choice0==8:
+                elif choice0== "8":
 
                     a_t0=float(input("Enter the first side of a triangle :"))
                     a_t1=float(input("Enter the second side of a triangle :"))
@@ -119,7 +118,7 @@ def triangle_cone():
 
                     print(f"The radius of the circumcircle is : {radius_out}")
 
-                elif choice0==9:
+                elif choice0== "9":
 
                     a_t0=float(input("Enter the first side of a triangle :"))
                     a_t1=float(input("Enter the second side of a triangle :"))
@@ -134,7 +133,7 @@ def triangle_cone():
                     print(f"Second one :{a_d1} ")
                     print(f"Third one :{a_d2} ")
 
-            elif main_choice0==2:
+            elif main_choice0== "2":
 
                 print("1-Volume")
                 print("2-Lateral surface area")
@@ -143,14 +142,14 @@ def triangle_cone():
                 print("5-Slant height")
                 choice1=input("Enet your choice(1-5) :")
 
-                if choice1==1:
+                if choice1== "1":
 
                     height_0=float(input("Enter the height of the cone :"))
                     radius_0=float(input("Enter the radius of the base"))
                     volume_0=round(1/3*math.pi*height_0*radius_0,2)
 
                     print(f"The volume of the cone is : {volume_0}")
-                elif choice1==2:
+                elif choice1=="2":
 
                     radius_1=float(input("Enter the radius of the cone : "))
                     slant_0=float(input("Enter the length of the slant :"))
@@ -158,7 +157,7 @@ def triangle_cone():
 
                     print(f"The value of the lateral surface area is : {lat_s0} ")
 
-                elif choice1==3:
+                elif choice1== "3":
 
                     radius_2=float(input("Enter the radius of the cone: "))
 
@@ -166,7 +165,7 @@ def triangle_cone():
 
                     print(f"The are of the base is : {base_a0} ")
 
-                elif choice1==4:
+                elif choice1== "4":
 
                     radius_2=float(input("Enter the radius of the cone :"))
                     slant_2=float(input("Enter the slant of the cone :"))
@@ -174,7 +173,7 @@ def triangle_cone():
                     total_area=round((math.pi*pow(radius_2,2)+math.pi*radius_2*slant_2),2)
 
                     print(f"The total area of the cone is : {total_area} ")
-                elif choice1==5:
+                elif choice1== "5":
 
                     radius_3=float(input("Enter the radius of the cone :"))
                     height_3=float(input("Enter the height of the cone :"))
