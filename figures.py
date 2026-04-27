@@ -231,6 +231,7 @@ def square_rombus_trapezoid():
               d_s1=round(math.sqrt(pow(s_s4,2)+pow(s_s4,2)),2)/2
 
               print(f'The radius of an circumscribed circle is  : {d_s1}')
+
       elif main_cs==2:
           print('1-Area')
           print('2-Perimeter')
@@ -239,6 +240,10 @@ def square_rombus_trapezoid():
           print('5-Altitude')
           print('6-Radius of inscribed circle')
           print('7-Diagonals')
+          rombus_c=input('Choose one(1-7) :')
+          if rombus_c==1:
+
+              romb_s=float(input('Enter the side of a rombus :'))
 #finish elif main_cs==2
 
 
