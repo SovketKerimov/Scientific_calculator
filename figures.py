@@ -234,7 +234,12 @@ def square_rombus_trapezoid():
       elif main_cs==2:
           print('1-Area')
           print('2-Perimeter')
-          print('3-')
+          print('3-Acute Angel')
+          print('4-Obtuse Angel')
+          print('5-Altitude')
+          print('6-Radius of inscribed circle')
+          print('7-Diagonals')
+#finish elif main_cs==2
 
 
 
