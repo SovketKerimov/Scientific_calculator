@@ -1,4 +1,5 @@
 import math
+from math import degrees
 
 numbers=[]
 #1- Triangle / Cone
@@ -191,7 +192,7 @@ def square_rombus_trapezoid():
     print("3-Trapezoid")
     main_cs=input("Choose one(1-3)")
     try:
-      if main_cs==1:
+      if main_cs== "1":
 
           print("1-Area")
           print('2-Perimeter')
@@ -200,39 +201,39 @@ def square_rombus_trapezoid():
           print('5-Radius of circumscribed circle')
           square_c=input("Enter your choice(1-5) :")
 
-          if square_c==1:
+          if square_c== "1":
 
             s_s0=float(input('Enter the side of a square :'))
             a_s0=round(pow(s_s0,2),2)
 
             print(f"The area of the square is : {a_s0}")
-          elif square_c==2:
+          elif square_c== "2":
 
               s_s1=float(input('Enter the side of a square :'))
               p_s0=round((s_s1*4),2)
 
               print(f'The perimeter of a square is : {p_s0}')
-          elif square_c==3:
+          elif square_c== "3":
 
               s_s2=float(input('Enter the side of a square :'))
               d_s0=round(math.sqrt(pow(s_s2,2)+pow(s_s2,2)),2)
 
               print(f'The diagonal of a square is : {d_s0}')
-          elif square_c==4:
+          elif square_c== "4":
 
               s_s3=float(input('Enter the side of a square :'))
               r_s0=s_s3/2
 
               print(f'The radius of an inscribed circle is : {r_s0}')
 
-          elif square_c==5:
+          elif square_c== "5":
 
               s_s4=float(input('Enter the side of a square :'))
               d_s1=round(math.sqrt(pow(s_s4,2)+pow(s_s4,2)),2)/2
 
               print(f'The radius of an circumscribed circle is  : {d_s1}')
 
-      elif main_cs==2:
+      elif main_cs== "2":
           print('1-Area')
           print('2-Perimeter')
           print('3-Acute Angel')
@@ -241,11 +242,39 @@ def square_rombus_trapezoid():
           print('6-Radius of inscribed circle')
           print('7-Diagonals')
           rombus_c=input('Choose one(1-7) :')
-          if rombus_c==1:
+          if rombus_c== "1":
 
-              romb_s=float(input('Enter the side of a rombus :'))
-#finish elif main_cs==2
+              romb_s0=float(input('Enter the side of a rombus :'))
+              romb_h0=float(input('Enter the height of the rombus :'))
+              romb_a0=round((romb_s0*romb_h0),2)
+              print(f"The area of the rombus is : {romb_a0}")
 
+          elif rombus_c== "2":
+
+              romb_s1=float(input('Enter the side of a rombus :'))
+              romb_p0=romb_s1*4
+              print(f'The perimeter of a rombus is : {romb_p0}')
+
+          elif rombus_c== "3":
+
+              diagonals=[]
+              for x in range(2):
+                  diagonal=float(input('Enter the diagonal of a rombus :'))
+                  diagonals.append(diagonal)
+              romb_ac0=2*math.atan(min(diagonals)/max(diagonals))
+              romb_ac1=round(degrees(romb_ac0),2)
+              print(f'The acute angel of a rombus is : {romb_ac1}')
+
+
+
+          elif rombus_c== "4":
+              pass
+          elif rombus_c== "5":
+              pass
+          elif rombus_c== "6":
+              pass
+          elif rombus_c== "7":
+              pass
 
 
     except ValueError:
