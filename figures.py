@@ -282,9 +282,12 @@ def square_rombus_trapezoid():
               romb_alt1 = round(romb_a6 / romb_s6, 2)/2
               print(f'The radius of inscribed circle is : {romb_alt1}')
 
-
           elif rombus_c== "6":
-              pass
+
+              romb_s7 = float(input('Enter the side of a rombus :'))
+              romb_diag0=float(input('Enter the first diagonal of rombus :'))
+              romb_diag1=round(math.sqrt(4*pow(romb_s7,2)-pow(romb_diag0,2)),2)
+              print(f'The diagonal of a rombus is : {romb_diag1}')
 
 
     except ValueError:
@@ -297,11 +300,7 @@ def circle_cylinder_sphere():
     print("3-Sphere")
     main_cc=input("Choose one(1-3)")
     pass
-def menyu():
-    print("\n-MENU-")
-    print("1-Triangle / Cone")
-    print("2-Square / Rombus / Trapezoid")
-    print("3-Circle / Cylinder / Sphere")
+
 def daire_silindr_kure():
     print("1-Dairə\n2-Silindr\n3-Küre")
     sec=int(input("Secim: "))

@@ -22,3 +22,11 @@ def log_in():
     return False
 def my_profile():
     pass
+
+def menyu():
+    print("\n-MENU-")
+    print("1-Triangle / Cone")
+    print("2-Square / Rombus / Trapezoid")
+    print("3-Circle / Cylinder / Sphere")
+    print("4-Addition/Subtraction/Multiplication/Division")
+    print("5-")
