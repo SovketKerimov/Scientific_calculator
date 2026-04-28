@@ -236,11 +236,10 @@ def square_rombus_trapezoid():
       elif main_cs== "2":
           print('1-Area')
           print('2-Perimeter')
-          print('3-Acute Angel')
-          print('4-Obtuse Angel')
-          print('5-Altitude')
-          print('6-Radius of inscribed circle')
-          print('7-Diagonals')
+          print('3-Acute Angel/Obtuse Angel')
+          print('4-Altitude')
+          print('5-Radius of inscribed circle')
+          print('6-Diagonals')
           rombus_c=input('Choose one(1-7) :')
           if rombus_c== "1":
 
@@ -263,17 +262,28 @@ def square_rombus_trapezoid():
                   diagonals.append(diagonal)
               romb_ac0=2*math.atan(min(diagonals)/max(diagonals))
               romb_ac1=round(degrees(romb_ac0),2)
+              romb_ac2=180-romb_ac1
               print(f'The acute angel of a rombus is : {romb_ac1}')
-
-
+              print(f'The obtuse angel of a rombus is : {romb_ac2}')
 
           elif rombus_c== "4":
-              pass
+
+              romb_s5 = float(input('Enter the side of a rombus :'))
+              romb_h5 = float(input('Enter the height of the rombus :'))
+              romb_a5 = round((romb_s5 * romb_h5), 2)
+              romb_alt0=round(romb_a5/romb_s5,2)
+              print(f"Tje altitude of a rombus is : {romb_alt0}")
+
           elif rombus_c== "5":
-              pass
+
+              romb_s6 = float(input('Enter the side of a rombus :'))
+              romb_h6 = float(input('Enter the height of the rombus :'))
+              romb_a6 = round((romb_s6 * romb_h6), 2)
+              romb_alt1 = round(romb_a6 / romb_s6, 2)/2
+              print(f'The radius of inscribed circle is : {romb_alt1}')
+
+
           elif rombus_c== "6":
-              pass
-          elif rombus_c== "7":
               pass
 
 
